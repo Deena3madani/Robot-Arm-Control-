@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <title>CONTROL</title>
+<head>
+    <link rel="stylesheet"href="Sliders.css">
+<style>
+
+
+p.solid {border-style: solid;}
+div {
+  background-color: white;
+}
+
+</style>
+</head>
+<body>
+
+<br>
+<h1><center>ARM CONTROL INTERFACE </center></h1>
+<br>
+
+<div>
+<p class="solid"><br>
+<br>&nbsp&nbsp&nbsp&nbsp  motor 1 <br><br><br>
+<br>&nbsp&nbsp&nbsp&nbsp  motor 2 <br><br><br>
+<br>&nbsp&nbsp&nbsp&nbsp  motor 3 <br><br><br>
+<br>&nbsp&nbsp&nbsp&nbsp  motor 4 <br><br><br>
+<br>&nbsp&nbsp&nbsp&nbsp  motor 5 <br><br><br>
+<br>&nbsp&nbsp&nbsp&nbsp  motor 6 <br><br>
+<br><br><br>
+</p>
+</div>
+
+<form   action="http://192.168.64.2/Arm%20control/send.php" method="POST">
+<div  class="slider" id="s1" >    
+    <input  type="range"id="r1" min="0" max="180" value="90" oninput="rangeValue.innerText=this.value" name="r1">
+    <p id="rangeValue" >90</p>
+    </div>
+
+    <div  class="slider" id="s2" >    
+        <input  type="range"id="r2" min="0" max="180" value="90" oninput="rangeValue2.innerText=this.value" name="r2">
+        <p id="rangeValue2" >90</p>
+        </div>
+   
+   <div class="slider" id="s3">
+       <input type="range"id="r3"min="0" max="180" value="90" oninput="rangeValue3.innerText=this.value" name="r3">
+       <p id="rangeValue3" >90</p>
+       </div>
+   
+   <div class="slider" id="s4" >
+        <input type="range" id="r4" min="0" max="180" value="90" oninput="rangeValue4.innerText=this.value" name="r4">
+        <p id="rangeValue4" >90</p>
+        </div>
+   
+   <div class="slider" id="s5">
+       <input type="range" id="r5" min="0" max="180" value="90" oninput="rangeValue5.innerText=this.value" name="r5">
+       <p id="rangeValue5">90</p>
+       </div>
+   
+    <div class="slider" id="s6" >
+        <input type="range" id="r6" min="0" max="180" value="90" oninput="rangeValue6.innerText=this.value" name="r6">
+        <p id="rangeValue6" >90</p> 
+        </div>
+     <center><button class="button button2" id="save"> save </button></center>  
+     <br><br><br>
+  </form>
+  <form   action="http://192.168.64.2/Arm%20control/start.php" method="POST">
+<center><button class="button button1" name="start" id="start">Start</button></center>
+<center><button class="button button1" name="stop" id="stop">Stop</button></center>
+</form>
+</body>
+
+</html>
+
